@@ -1,12 +1,5 @@
-<<<<<<< HEAD
 # Estimating color-concept associations from image statistics
 In this study, we developed a new approach for estimating color-concept associations. Building on prior studies that used images downloaded from Google Images, we provide new insights into effectively estimating distributions of human color-concept associations across CIELAB color space. Specifically, we evaluated several methods for filtering the raw pixel content of the images in order to best predict color-concept associations obtained from human ratings. The most effective method extracted colors using a combination of cylindrical sectors in color space and color categories.
-||||||| merged common ancestors
-## Welcome to GitHub Pages
-=======
-## Estimating color-concept associations from image statistics
-## Welcome to GitHub Pages
->>>>>>> e4f1fe770363a4f75341b3fa3d279b15a1ca9ad9
 
 We demonstrate that our approach can accurately predict average human color-concept associations for different fruits using only a small set of images.
 
