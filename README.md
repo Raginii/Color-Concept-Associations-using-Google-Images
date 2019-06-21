@@ -1,5 +1,6 @@
 # Estimating color-concept associations from image statistics
-In this study, we developed a new approach for estimating color-concept associations. Building on prior studies that used images downloaded from Google Images, we provide new insights into effectively estimating distributions of human color-concept associations across CIELAB color space. Specifically, we evaluated several methods for filtering the raw pixel content of the images in order to best predict color-concept associations obtained from human ratings. The most effective method extracted colors using a combination of cylindrical sectors in color space and color categories.
+In this study, we developed a new approach for estimating color-concept associations. Building on prior studies that used images downloaded from Google Images, we provide new insights into effectively estimating distributions of human color-concept associations across CIELAB color space. Specifically, we evaluated several methods for filtering the raw pixel content of the images in order to best predict color-concept associations obtained from human ratings. The most effective method extracted colors using a combination of cylindrical sectors in color space and color categories.  
+![](Figures/pipeline.png)
 
 We demonstrate that our approach can accurately predict average human color-concept associations for different fruits using only a small set of images.
 
@@ -32,7 +33,7 @@ The repo can be used and replicated in two different scenarios:
   A csv file of color coordinates in LAB space.
 - ##### TestScripts
   Folder containing the input color data, human ratings and supporting MATLAB scripts of the test concepts of our study.
-  
+
 
 
 
