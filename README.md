@@ -51,13 +51,13 @@ This step will involve running code if you wish to get features for new concepts
 4. Using the specific features obtained from step 3, the predictions using Linear Regression are obtained in notebooks with title ```ErrCorrFrom3ModelsTOP50.ipynb```. These notebooks use the four chosen features from the previously step 3. notebooks and determine how the predicted ratings differ from the actual ratings using squared error and correlation.  
   **Here, we also conclude that using 'Sector+Category' features best fit the prediction model. Table 1 in the paper describes the specific values used for selected features**  
 
-  ##### Exp 2: Prediction models with different image types  
+##### Exp 2: Prediction models with different image types  
   To test the hypothesis that a model that accurately estimates humanlike color-concept association ratings will perform as well for natural images as it does for humanmade illustrations, we tested two new image sets for each fruit,
   one of photographs and one of cartoons.
 
 5. The extracted features for both 'Cartoon' and 'Photo' images are available as ```dataCartoon50.xlsx``` and ```dataPhoto50.xlsx```. The notebook ```AnalysisWithImageType.ipynb``` contains the analysis for both the image types.
 
-  ##### Exp 3: Prediction of color-concept association ratings of new test concepts using the trained model
+##### Exp 3: Prediction of color-concept association ratings of new test concepts using the trained model
 6. The new test concepts were paper, plastic, glass, metal, compost and trash. BCP-37 colors were used for this experiment. The notebook ```testConcepts.ipynb``` can be referred for the output. The test data files are under **'TestScripts'** folder.
 
 **_The path to the saved project must be changed in all the notebooks._**
