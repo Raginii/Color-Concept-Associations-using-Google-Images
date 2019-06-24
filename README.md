@@ -39,13 +39,13 @@ The repo can be used and replicated in two different scenarios:
 ## Output
 The output of this study is the predicted color-concept association ratings which can be further used to assign visually separable and semantic colors to different concepts. One of the sample predicted ratings can be seen in ```ErrCorrFrom3ModelsTOP50.ipynb```
 
-**The ratings of all the fruit concepts w.r.t every UW-58 colors from Exp 1, Exp 2 and the Lin et al method is presented in the ```RatingsAllMethods.csv``` along with the true human color-concept association ratings obtained from 55 participants.**
+**The ratings of all the fruit concepts w.r.t every UW-58 color from Exp 1, Exp 2 and the Lin et al method is presented in the ```RatingsAllMethods.csv``` along with the true human color-concept association ratings obtained from 55 participants.**
 
 ## Implementation
 
 ### To replicate the research study:
 1. Download the entire repository or clone it to your own github.
-2. The entire image dataset is ```downloads``` folder and most data files are present as .csv and excel spreadsheets in the downloaded repo. To replicate the study, you need not run code to get these data files.
+2. The entire image dataset is in the ```downloads``` folder and most data files are present as csv and excel spreadsheets in the downloaded repo. To replicate the study, you need not run code to get these data files.
 This step will involve running code if you wish to get features for new concepts. We extract features from the given set of images in this step.  
  **Notebooks with title ```getFeatures_*``` can be referenced to see how features are extracted.**
 
@@ -78,4 +78,5 @@ Our trained model can be tested on new concepts and  new colors without the need
 
 
 ## Scatter plots for concepts (with correlations) from Sector+Category Model
+Uses TOP 50 Images (Exp 1C)
 ![](Figures/Top50_ScatterPlot_Model_3.png)
