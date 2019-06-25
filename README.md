@@ -37,9 +37,11 @@ The repo can be used and replicated in two different scenarios:
   Folder containing the input color data, human ratings and supporting MATLAB scripts of the test concepts of our study.
 
 ## Output
-The output of this study is the predicted color-concept association ratings which can be further used to assign visually separable and semantic colors to different concepts. One of the sample predicted ratings can be seen in ```ErrCorrFrom3ModelsTOP50.ipynb```
+The output of this study is the predicted color-concept association ratings which can be further used to assign visually separable and semantic colors to different concepts. One of the sample predicted ratings can be seen in ```Exp1_ErrCorrFrom3ModelsTOP50.ipynb```
 
-**The ratings of all the fruit concepts w.r.t every UW-58 color from Exp 1, Exp 2 and the Lin et al method is presented in the ```RatingsAllMethods.csv``` along with the true human color-concept association ratings obtained from 55 participants.**
+- The ratings of all the fruit concepts w.r.t every UW-58 color from Exp 1, Exp 2 and the Lin et al method along with the true human color-concept association ratings obtained from 55 participants is in the ```RatingsAllMethods.csv``` file.  
+
+- The ratings of all the test concepts w.r.t every BCP-37 color from Exp3 is in the ```RatingsTestConcepts.csv``` file.
 
 ## Implementation
 
@@ -51,7 +53,7 @@ This step will involve running code if you wish to get features for new concepts
 
 ##### Exp 1A, 1B and 1C (For top 50 images of concepts obtained from Google)
 3. Detailed analysis of the number of features to be used for three models and what those features should be, from an array of features obtained from top 50 images, are in the jupyter notebooks ```AnalysisI``` (Ball), ```AnalysisII``` (Sector) and ```AnalysisIII```( Sector + Category). This analysis includes which features are important to a specific model.
-4. Using the specific features obtained from step 3, the predictions using Linear Regression are obtained in notebooks with title ```ErrCorrFrom3ModelsTOP50.ipynb```. These notebooks use the four chosen features from the previously step 3. notebooks and determine how the predicted ratings differ from the actual ratings using squared error and correlation.  
+4. Using the specific features obtained from step 3, the predictions using Linear Regression are obtained in notebooks with title ```Exp1_ErrCorrFrom3ModelsTOP50.ipynb```. These notebooks use the four chosen features from the previously step 3. notebooks and determine how the predicted ratings differ from the actual ratings using squared error and correlation.  
   **Here, we also conclude that using 'Sector+Category' features best fit the prediction model. Table 1 in the paper describes the specific values used for selected features**  
 
 ##### Exp 2: Prediction models with different image types
@@ -63,7 +65,7 @@ one of photographs and one of cartoons.
 
 ##### Exp 3: Prediction of color-concept association ratings of new test concepts using the trained model
 
-6. The new test concepts were paper, plastic, glass, metal, compost and trash. BCP-37 colors were used for this experiment. The notebook ```testConcepts.ipynb``` can be referred for the output. The test data files are under **'TestScripts'** folder.
+6. The new test concepts were paper, plastic, glass, metal, compost and trash. BCP-37 colors were used for this experiment. The notebook ```Exp3_testConcepts.ipynb``` can be referred for the output. The test data files are under **'TestScripts'** folder.
 
 **_The path to the saved project must be changed in all the notebooks._**
 
@@ -74,7 +76,7 @@ Our trained model can be tested on new concepts and  new colors without the need
 1. Creating the input dataset.
   - If the concepts are to be associated with newer set of colors, it is important to get the categories of those colors using ```createDataCSV.m```. This script takes ColorObjAssocLoad.mat file for true color-concept association ratings (**optional**) and an excel spreadsheet of color coordinates. If the color coordinates are not provided, the data files for either BCP-37 or UW-58 colors can be used.
   The current version uses xyY coordinate space, but RGB/Lab coordinate space can also be used. Refer to [colorconvert](https://github.com/LaurentLessard/colorconvert) to convert from one color coordinate space into another. This script file will create all data files under the TestScripts folder. **Modify the test script if needed.**
-2.  Using the notebook ```testConcepts.ipynb```, extract the features required from the new images and follow code from the notebook to get the predicted color-concept associations. Make changes as and when necessary.
+2.  Using the notebook ```Exp3_testConcepts.ipynb```, extract the features required from the new images and follow code from the notebook to get the predicted color-concept associations. Make changes as and when necessary.
 
 
 ## Scatter plots for concepts (with correlations) from Sector+Category Model
