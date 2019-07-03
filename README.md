@@ -1,5 +1,4 @@
 # Estimating color-concept associations from image statistics
-![](Figures/BallSectorCat.png)
 In this study, we developed a new approach for estimating color-concept associations. Building on prior studies that used images downloaded from Google Images, we provide new insights into effectively estimating distributions of human color-concept associations across CIELAB color space. Specifically, we evaluated several methods for filtering the raw pixel content of the images in order to best predict color-concept associations obtained from human ratings. The most effective method extracted colors using a combination of cylindrical sectors in color space and color categories.  
 ![](Figures/pipeline.png)
 
@@ -9,7 +8,7 @@ This repo consists of the image dataset, jupyter notebooks, matlab scripts and d
 
 ## Dependencies
 - [Python package](https://google-images-download.readthedocs.io/en/latest/index.html) for downloading Google images for a set of concepts. [(Link to Github Repo)](https://github.com/hardikvasa/google-images-download)    
-``` $ pip install google_images_download ```
+<!-- ``` $ pip install google_images_download ``` -->
 - [Jupyter notebook](https://jupyter.org/install) All Python code is written in Jupyter notebooks.  
 - [Scikit-Image](https://scikit-image.org/download.html) for image processing in Python.  
 ``` $ conda install -c conda-forge scikit-image ``` (using Anaconda)
@@ -82,7 +81,7 @@ Our trained model can be tested on new concepts and  new colors without the need
   - If the concepts are to be associated with newer set of colors, it is important to get the categories of those colors using ```createDataCSV.m```. This script takes ColorObjAssocLoad.mat file for true color-concept association ratings (**optional**) and an excel spreadsheet of color coordinates. If the color coordinates are not provided, the data files for either BCP-37 or UW-58 colors can be used.
   The current version uses xyY coordinate space, but RGB/Lab coordinate space can also be used. Refer to [colorconvert](https://github.com/LaurentLessard/colorconvert) to convert from one color coordinate space into another. This script file will create all data files under the TestScripts folder. **Modify the test script if needed.**
 
-2.  Using the notebook ```Exp3_testConcepts.ipynb```, extract the features required from the new images and follow code from the notebook to get the predicted color-concept associations. Make changes as and when necessary.
+2.  Using the notebook ```Exp4_TestNewConcepts.ipynb```, download new images, extract the features required from the new images and follow code from the notebook to get the predicted color-concept associations. Make changes as and when necessary.
 
 
 ## Scatter plots for concepts (with correlations) from Sector+Category Model
