@@ -12,7 +12,8 @@ This repo consists of the image dataset, jupyter notebooks, matlab scripts and d
 ``` $ pip install google_images_download ```
 - [Jupyter notebook](https://jupyter.org/install) All Python code is written in Jupyter notebooks.  
 - [Scikit-Image](https://scikit-image.org/download.html) for image processing in Python.  
-``` $ conda install -c conda-forge scikit-image ```
+``` $ conda install -c conda-forge scikit-image ``` (using Anaconda)
+- [Scikit-learn]() ```$ conda install scikit-learn```
 - [MATLAB Engine API for Python](https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html)
 - [Color Categorization](https://github.com/ArashAkbarinia/ColourCategorisation)
 module for classifying each pixel as one of the focal color names.    
@@ -80,7 +81,7 @@ Our trained model can be tested on new concepts and  new colors without the need
 1. Creating the input dataset.
   - If the concepts are to be associated with newer set of colors, it is important to get the categories of those colors using ```createDataCSV.m```. This script takes ColorObjAssocLoad.mat file for true color-concept association ratings (**optional**) and an excel spreadsheet of color coordinates. If the color coordinates are not provided, the data files for either BCP-37 or UW-58 colors can be used.
   The current version uses xyY coordinate space, but RGB/Lab coordinate space can also be used. Refer to [colorconvert](https://github.com/LaurentLessard/colorconvert) to convert from one color coordinate space into another. This script file will create all data files under the TestScripts folder. **Modify the test script if needed.**
-  
+
 2.  Using the notebook ```Exp3_testConcepts.ipynb```, extract the features required from the new images and follow code from the notebook to get the predicted color-concept associations. Make changes as and when necessary.
 
 
