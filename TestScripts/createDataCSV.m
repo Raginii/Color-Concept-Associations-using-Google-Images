@@ -26,7 +26,7 @@ RGB = lab2rgb(Lab)
 % csvwrite('Lab_test.csv',Lab);
 % csvwrite('RGB_test.csv',RGB);
 %% 
-% Adjusted the colors to include them in the RGB space
+% Adjusted the colors to include them in the RGB space gamut
 % using adjustBCPcolors.m
 
 RGB = csvread('RGB_test.csv')
