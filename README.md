@@ -1,10 +1,19 @@
 # Estimating color-concept associations from image statistics
-In this study, we developed a new approach for estimating color-concept associations. Building on prior studies that used images downloaded from Google Images, we provide new insights into effectively estimating distributions of human color-concept associations across CIELAB color space. Specifically, we evaluated several methods for filtering the raw pixel content of the images in order to best predict color-concept associations obtained from human ratings. The most effective method extracted colors using a combination of cylindrical sectors in color space and color categories.  
+In this study, we developed a new approach for estimating color-concept associations. Building on prior studies that used images downloaded from Google Images, we provide new insights into effectively estimating distributions of human color-concept associations across CIELAB color space. Specifically, we evaluated several methods for filtering the raw pixel content of the images in order to best predict color-concept associations obtained from human ratings. The most effective method extracted colors using a combination of cylindrical sectors in color space and color categories.
+
+
 ![](Figures/pipeline.png)
 
 We demonstrate that our approach can accurately predict average human color-concept associations for different fruits using only a small set of images.
 
 This repo consists of the image dataset, jupyter notebooks, matlab scripts and data files required to predict the color-concept associations using the cylindrical sectors and color categories as features. This repo also contains additional notebooks used for analysis.
+
+## Usability
+The repo can be used and replicated in two different scenarios:
+1. To reproduce the research study to predict color-concept associations of our fruit concepts using our trained fruit model described in the paper.   
+
+2. To predict color-concept associations of new concepts with new set of test images and colors using our trained model.
+
 
 ## Dependencies
 - [Python package](https://google-images-download.readthedocs.io/en/latest/index.html) for downloading Google images for a set of concepts. [(Link to Github Repo)](https://github.com/hardikvasa/google-images-download)    
@@ -14,24 +23,19 @@ This repo consists of the image dataset, jupyter notebooks, matlab scripts and d
 ``` $ conda install -c conda-forge scikit-image ``` (using Anaconda)
 - [Scikit-learn]() ```$ conda install scikit-learn```
 - [MATLAB Engine API for Python](https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html)
-- [Color Categorization](https://github.com/ArashAkbarinia/ColourCategorisation)
-module for classifying each pixel as one of the focal color names.    
+- [Color Categorization](https://github.com/ArashAkbarinia/ColourCategorisation) module for classifying each pixel as one of the focal color names.    
 
-## Usability
-The repo can be used and replicated in two different scenarios:
-1. To reproduce the research study to predict color-concept associations of our fruit concepts using our trained fruit model described in the paper.
-2. To predict color-concept associations of new concepts with new set of test images and colors using our trained model.
 
 ## Input Files and Directories
 - ##### Downloads
-  Folder containing the image dataset with specific type of image like 'top', 'cartoon' and 'photo'. Inside these folders should be the folders containing the specific concept images.
+  Folder containing the image dataset with specific type of image like 'top', 'cartoon' and 'photo'. Inside these folders are the folders containing the specific concept images.
 - ##### LAB.csv
   A csv file of color coordinates in LAB space.
 - ##### RGB.csv
   A csv file of color coordinates in RGB space.
 - ##### Category.csv
   A csv file of the color category of chosen colors.
-- ##### data_clean.csv
+- ##### data.csv
   A csv file containing the true color-concept association ratings from humans.
 - ##### TestScripts
   Folder containing the input color data, human ratings and supporting MATLAB scripts of the test concepts of our study.
