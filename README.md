@@ -69,13 +69,13 @@ one of photographs and one of cartoons.
 
 5. The extracted features for both 'Cartoon' and 'Photo' images are available as ```dataCartoon50.xlsx``` and ```dataPhoto50.xlsx```. The notebook ```AnalysisWithImageType.ipynb``` contains the analysis for both the image types.
 
-6. Color-concept estimates from all the three models *photo* and *cartoon* image types can be seen in ```Exp2_Exp2_ErrCorrFrom3ModelsCARTOON50``` and ```Exp2_Exp2_ErrCorrFrom3ModelsPHOTO50```.
+6. Color-concept estimates from all the three models *photo* and *cartoon* image types can be seen in ```Exp2_ErrCorrFrom3ModelsCARTOON50``` and ```Exp2_ErrCorrFrom3ModelsPHOTO50```.
 
 ##### Exp 3: Prediction of color-concept association ratings of new test concepts using the trained model
 
-7. The new test concepts were paper, plastic, glass, metal, compost and trash. BCP-37 colors were used for this experiment. The notebook ```Exp3_testConcepts.ipynb``` can be referred for the output. The test data files are under **'TestScripts'** folder.
+7. The new test concepts were paper, plastic, glass, metal, compost and trash. BCP-37 colors were used for this experiment. We used the data from all the fruit concepts as training to get the feature weights using the Sector + Category model (Exp 1C). It can be found in ```getWeightsAllFruits.ipynb``` notebook. The notebook ```Exp3_testConcepts.ipynb``` can be referred for the output association ratings. The test data files are under **'TestScripts'** folder.
 
-**_The path to the saved project must be changed in all the notebooks._**
+**_The path to the saved project must be changed in all the notebooks, if present._**
 
 
 ### To test new concepts and new colors:
@@ -85,7 +85,7 @@ Our trained model can be tested on new concepts and  new colors without the need
   - If the concepts are to be associated with newer set of colors, it is important to get the categories of those colors using ```createDataCSV.m```. This script takes ColorObjAssocLoad.mat file for true color-concept association ratings (**optional**) and an excel spreadsheet of color coordinates. If the color coordinates are not provided, the data files for either BCP-37 or UW-58 colors can be used.
   The current version uses xyY coordinate space, but RGB/Lab coordinate space can also be used. Refer to [colorconvert](https://github.com/LaurentLessard/colorconvert) to convert from one color coordinate space into another. This script file will create all data files under the TestScripts folder. **Modify the test script if needed.**
 
-2.  Using the notebook ```Exp4_TestNewConcepts.ipynb```, download new images, extract the features required from the new images and follow code from the notebook to get the predicted color-concept associations. Make changes as and when necessary.
+2.  Using the notebook ```testNewConcepts.ipynb```, download new images, extract the features required from the new images and follow code from the notebook to get the predicted color-concept associations.
 
 
 ## Scatter plots for concepts (with correlations) from Sector+Category Model
