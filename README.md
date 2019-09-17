@@ -87,6 +87,18 @@ Our trained model can be tested on new concepts and  new colors without the need
 
 2.  Using the notebook ```testNewConcepts.ipynb```, download new images, extract the features required from the new images and follow code from the notebook to get the predicted color-concept associations.
 
+## Additional files
+- ##### HumanRatingsData.csv
+A csv file of every participant's rating for every fruit concept and every UW-58 color on a scale ranging from 0 to 1.
+- ##### BCP37_Colors.csv
+Coordinates of BCP-37 colors in all color spaces.
+- ##### UW58_Colors.csv
+Coordinates of UW-58 colors in all color spaces.
+- ##### RatingsAllMethods.csv
+A csv file consisting of true ratings and the predicted ratings obtained for all fruit concepts and all UW-50 colors based on the type of experiment.
+- ##### RatingsTestConcepts.csv
+A csv file for the predicted ratings (Sector+Category Model) and true ratings obtained for all test concepts and all BCP-37 colors.
+
 
 ## Scatter plots for concepts (with correlations) from Sector+Category Model
 Uses TOP 50 Images (Exp 1C)
